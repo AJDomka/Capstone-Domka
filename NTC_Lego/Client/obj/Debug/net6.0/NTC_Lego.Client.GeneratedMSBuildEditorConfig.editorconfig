@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = NTC_Lego.Client
+build_property.RootNamespace = NTC_Lego.Client
+build_property.ProjectDir = C:\Users\Scruh Scruh\Desktop\Capstone_Domka\NTC_Capstone_Domka-master\SRC\NTC_Lego\NTC_Lego\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Scruh Scruh\Desktop\Capstone_Domka\NTC_Capstone_Domka-master\SRC\NTC_Lego\NTC_Lego\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Account/OrderHistory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxPcmRlckhpc3RvcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Account/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxQcm9maWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/Items.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcSXRlbXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/ItemView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcSXRlbVZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/Transaction/AddSale.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcVHJhbnNhY3Rpb25cQWRkU2FsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/Transaction/CreateSale.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcVHJhbnNhY3Rpb25cQ3JlYXRlU2FsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Cart/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxDYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Cart/OrderSummary.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxPcmRlclN1bW1hcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Cart/PaymentMethod.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxQYXltZW50TWV0aG9kLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Cart/ShippingMethod.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxTaGlwcGluZ01ldGhvZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/ItemsCatalog/ItemCategories.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXNDYXRhbG9nXEl0ZW1DYXRlZ29yaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/ItemsCatalog/ItemDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXNDYXRhbG9nXEl0ZW1EZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/ItemsCatalog/ItemsCatalog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXNDYXRhbG9nXEl0ZW1zQ2F0YWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Account/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-wrxd5k3d2w
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/Account/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-bv0ssbb48o
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/AdminDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcQWRtaW5EYXNoYm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-nby2iwmqar
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/Inventory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcSW52ZW50b3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-nigws43igu
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/Purchases.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcUHVyY2hhc2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-kbxvvy7957
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Pages/AdminPortal/Sales.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qb3J0YWxcU2FsZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-y3k1j2nku3
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Shared/LogInLogOutButton.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ0luTG9nT3V0QnV0dG9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-zvgexuid7s
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xh8shgkeir
+
+[C:/Users/Scruh Scruh/Desktop/Capstone_Domka/NTC_Capstone_Domka-master/SRC/NTC_Lego/NTC_Lego/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-t1fk8rx47u

@@ -1,0 +1,43 @@
+﻿@page "/itemView/{itemId}"
+@using NTC_Lego.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject Search search
+@inject CurrentPage currentPage
+
+@attribute [Authorize(Roles = "Admin")]
+<PageTitle>Items</PageTitle>
+
+<div class="container">
+
+    <div class="table-container">
+        @if (item == null)
+        {
+            <span>Items loading...</span>
+        }
+        else
+        {
+            <table class="table table-striped border">
+                <thead class="table-dark">
+                    <tr class="text-center">
+                        <th scope="col">Image</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Weight</th>
+                    </tr>
+                </thead>
+
+                <tr class="text-center">
+                    <td><a href="@item.BrickLinkURL" target="_blank"><img src="@item.Image" onerror="this.src='https://static.bricklink.com/clone/img/no_image_err.png'" width="96"></a></td>
+                    <td>@item.ItemTypeId</td>
+                    <td>@item.ItemId</td>
+                    <td>@item.ItemName</td>
+                    <td>@item.CategoryId</td>
+                    <td>@item.ItemWeight</td>
+                </tr>
+            </table>
+        }
+    </div>
+</div>

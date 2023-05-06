@@ -1,0 +1,145 @@
+﻿@page "/sales"
+@using NTC_Lego.Shared
+@using Newtonsoft.Json
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject CurrentPage currentPage
+@inject IJSRuntime JsRuntime
+
+@attribute [Authorize(Roles = "Admin")]
+<PageTitle>Sales</PageTitle>
+
+<div class="container">
+    <!-- Create Button -->
+    <!--
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add-modal">
+        Add
+    </button>
+    -->
+    <a class="btn btn-success" href="/addsale">Add</a>
+
+    <!-- Delete Button -->
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-modal">
+        Cancel
+    </button>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Delete sale</h5>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+                <div class="modal-body">
+                    @if (!selected)
+                    {
+                        <p>Please select a sale order entry...</p>
+                    }
+                    else
+                    {
+                        @if (canCancel && !alreadyCanceled)
+                        {
+                            <EditForm Model="saleOrderCancel" OnValidSubmit="HandleSaleCancel" class="w-100">
+                                <DataAnnotationsValidator></DataAnnotationsValidator>
+                                <div class="form-group">
+                                    <label class="required form-label fw-bold" for="saleId">ID</label>
+                                    <input id="purchaseId" Value="@saleOrderCancel.SaleOrderId" class="form-control" disabled />
+                                </div>
+                                <div class="form-group">
+                                    <label class="required form-label fw-bold" for="saleDate">Date</label>
+                                    <input id="purchaseDate" Value="@saleOrderCancel.SaleOrderDate" class="form-control" disabled />
+                                </div>
+                                <div class="form-group">
+                                    <label class="required form-label fw-bold" for="saleStatus">Status</label>
+                                    <input id="purchaseStatus" Value="@saleOrderCancel.OrderStatus" class="form-control" disabled />
+                                </div>
+                                <div class="form-group">
+                                    <label class="required form-label fw-bold" for="saleSupplier">User Name</label>
+                                    <input id="purchaseSupplier" Value="@saleOrderCancel.User.UserName" class="form-control" disabled />
+                                </div>
+                                <div class="form-group">
+                                    <label class="required form-label fw-bold" for="saleTotal">Total</label>
+                                    <input id="purchaseTotal" Value="@saleOrderCancel.SaleOrderTotalPrice" class="form-control" disabled />
+                                </div>
+                                <div class="mt-2 form-group">
+                                    <button type="submit" class="w-100 btn btn-primary" data-bs-dismiss="modal">Confirm Cancel</button>
+                                </div>
+                            </EditForm>
+                        }
+                        else if (alreadyCanceled)
+                        {
+                            <p>This sale order has already been canceled...</p>
+                        }
+                        else
+                        {
+                            <p>Selected sale order date exceeds 30 day return limit...</p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container">
+    @if (saleOrders == null)
+    {
+        <span>Sales loading...</span>   
+    }
+    else
+    {
+        <table class="table table-striped border">
+            <thead class="table-dark">
+                <tr class="text-center">
+                    <th scope="col">Select</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">User</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            @foreach (var sale in saleOrders)
+            {
+                <tr class="text-center">
+                    <td>
+                        <input type="radio" value='@sale.SaleOrderId' name="sale-select" @onchange="HandleSelect"/>
+                    </td>
+                    <td>@sale.SaleOrderId</td>
+                    <td>@sale.SaleOrderTotalPrice</td>
+                    <td>@sale.SaleOrderDate</td>
+                    <td>@sale.OrderStatus</td>
+                    <td>@sale.User.UserName</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <!-- Table Pagination -->
+        <div class="pagination-container">
+            <input type="button" class="btn-lg btn" id="prev" @onclick="PrevPage" value="«" />
+            @for (int i = curPage - 2; i <= curPage + 2; i++)
+            {
+                int j = i;
+                @if (i > 0)
+                {
+                    if (i == curPage)
+                    {
+                        <span class="px-2" style="font-weight:bold; cursor:pointer" @onclick="() => ShowPage(j)">@i</span>
+                    }
+                    else
+                    {
+                        <span class="px-2" style="cursor:pointer" @onclick="() => ShowPage(j)">@i</span>
+                    }
+                }
+            }
+            <input type="button" class="btn-lg btn" id="next" @onclick="NextPage" value="»" />
+        </div>
+        }
+    </div>
+</div>
+
+@code {
+    
+}

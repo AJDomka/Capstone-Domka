@@ -1,0 +1,159 @@
+﻿@page "/dashboard"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject CurrentPage currentPage
+@using NTC_Lego.Shared;
+
+@attribute [Authorize(Roles = "Admin")]
+<PageTitle>Admin Dashboard</PageTitle>
+
+<div class="container">
+    <div class="dash-summary">
+        <div class="card summary-card">
+            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.5 20.5H53.6577C55.6094 20.5 57.0415 22.3342 56.5681 24.2276L52.5681 40.2276C52.2342 41.5631 51.0343 42.5 49.6577 42.5H23.1187C21.6185 42.5 20.3489 41.3918 20.1462 39.9053L17.6002 21.2349C17.5344 20.7522 17.352 20.2929 17.0689 19.8965L15.395 17.553C15.1471 17.2059 14.7469 17 14.3205 17V17C13.5912 17 13 17.5912 13 18.3205V19" stroke="black" stroke-width="2" stroke-linecap="round" />
+                <circle cx="28.5" cy="48.5" r="3" stroke="black" stroke-width="2" />
+                <circle cx="42.5" cy="48.5" r="3" stroke="black" stroke-width="2" />
+            </svg>
+            <div class="card-numbers">
+                <span>Total Sales</span>
+                @if (allSaleOrders == null)
+                {
+                    <span>Total loading...</span>
+                }
+                else
+                {
+                    <span>$@allSaleOrders</span>
+                }
+            </div>
+        </div>
+        <div class="card summary-card">
+            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.5 20.5H53.6577C55.6094 20.5 57.0415 22.3342 56.5681 24.2276L52.5681 40.2276C52.2342 41.5631 51.0343 42.5 49.6577 42.5H23.1187C21.6185 42.5 20.3489 41.3918 20.1462 39.9053L17.6002 21.2349C17.5344 20.7522 17.352 20.2929 17.0689 19.8965L15.395 17.553C15.1471 17.2059 14.7469 17 14.3205 17V17C13.5912 17 13 17.5912 13 18.3205V19" stroke="black" stroke-width="2" stroke-linecap="round" />
+                <circle cx="28.5" cy="48.5" r="3" stroke="black" stroke-width="2" />
+                <circle cx="42.5" cy="48.5" r="3" stroke="black" stroke-width="2" />
+                <line x1="54.5" y1="15.5" x2="62.5" y2="15.5" stroke="black" stroke-linecap="round" />
+                <line x1="58.5" y1="11.5" x2="58.5" y2="19.5" stroke="black" stroke-linecap="round" />
+            </svg>
+            <div class="card-numbers">
+                <span>Total Purchases</span>
+                @if (allPurchaseOrders == null)
+                {
+                    <span>Total loading...</span>
+                }
+                else
+                {
+                    <span>$@allPurchaseOrders</span>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container">
+        @if (inventories == null)
+        {
+            <span>Inventory loading...</span>
+        }
+        else
+        {
+            <!-- Data Table -->
+            <h3>Recent Inventory</h3>
+            <table class="table table-striped border">
+                <thead class="table-dark">
+                    <tr class="text-center">
+                        <th scope="col">ID</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Total Quantity</th>
+                        <th scope="col">List Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var inventory in inventories)
+                    {
+                        <tr class="text-center">
+                            <td>@inventory.InventoryId</td>
+                            <td>@inventory.ItemId</td>
+                            <td>@inventory.Color.ColorName</td>
+                            <td>@inventory.QuantityTotal</td>
+                            <td>$@inventory.InventoryItemPrice</td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+    <div class="table-container">
+        @if (saleOrders == null)
+        {
+            <span>Sales loading...</span>
+        }
+        else
+        {
+            <h3>Recent Sales</h3>
+            <table class="table table-striped border">
+                <thead class="table-dark">
+                    <tr class="text-center">
+                        <th scope="col">ID</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sale in saleOrders)
+                    {
+                        <tr class="text-center">
+                            <td>@sale.SaleOrderId</td>
+                            <td>$@sale.SaleOrderTotalPrice</td>
+                            <td>@sale.SaleOrderDate</td>
+                            <td>@sale.OrderStatus</td>
+                            <td>@sale.User.UserName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+    <div class="table-container">
+        <!-- Purchase Order table -->
+        @if (purchaseOrders == null)
+        {
+            <span>Purchase Orders loading...</span>
+        }
+        else
+        {
+            <!-- Data Table -->
+            <h3>Recent Purchases</h3>
+            <table class="table table-striped border">
+                <thead class="table-dark">
+                    <tr class="text-center">
+                        <th scope="col">ID</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Supplier</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var purchase in purchaseOrders)
+                    {
+                        <tr class="text-center">
+                            <td>@purchase.PurchaseOrderId</td>
+                            <td>$@purchase.PurchaseOrderTotalPrice</td>
+                            <td>@purchase.PurchaseOrderDate</td>
+                            <td>@purchase.OrderStatus</td>
+                            <td>@purchase.Supplier.SupplierName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+</div>

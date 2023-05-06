@@ -1,0 +1,9 @@
+﻿.required::after {
+    content: " *";
+    font-weight: bold;
+    color: red;
+}
+
+#email, #username, #password, #confirmPassword, #register {
+    width: 320px;
+}
